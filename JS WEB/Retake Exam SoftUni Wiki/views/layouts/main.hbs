@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+    <div>
+        <aside>
+            <div class="center">
+                <img class="logo" src="/img/logo.png" alt="logo">
+            </div>
+
+            <nav>
+                <a href="/">Main Page</a>
+                <a href="articles/all">All Articles</a>
+                <form>
+                    <input type="text">
+                    <input type="submit" value="Search">
+                </form>
+                {{#if isLogged}}
+                <a href="articles/create">Create New Article</a>
+                {{/if}}
+            </nav>
+        </aside>
+        <div id="container">
+            {{>header}}
+            <main>
+                <h1>Welcome to SoftUni Wiki!</h1>
+                    {{{body}}}
+            </main>
+            {{>footer}}
+        </div>
+    </div>
+</body>
+
+</html>
